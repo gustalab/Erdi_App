@@ -143,7 +143,7 @@ tazminat_hesaplama <- function(Data, Gelir, Maluliyet_oran, Kusur_oran){
   result_df <- data.frame(Yas = Yas_values, Tablo = Tablo_values, Cinsiyet = Cinsiyet_values, ExpLife = ExpLife_values, Tazminat = Tazminat_values, stringsAsFactors = FALSE)
   
   # Dataframe'i yazdırın
-  print(result_df)
+  # print(result_df)
 }
 
 
@@ -373,7 +373,7 @@ server <- function(input, output) {
   
   output$beklenen_omur_grafik <- renderPlot({
     ggplot(filtreli_veri(), aes(x = Yas, y = ExpLife, color = Tablo, group = Tablo)) +
-      geom_line(size = 1.5) +
+      geom_line(linewidth = 1.5) +
       labs(title = "Beklenen Ömür", x = "Yaş", y = "ExpLife") +
       theme_minimal() +
       theme(
@@ -434,7 +434,7 @@ server <- function(input, output) {
       data_diff$ExpLife_Farki <- data_diff$ExpLife.y - data_diff$ExpLife.x
       
       e <- ggplot(data_diff, aes(x = Yas, y = ExpLife_Farki)) +
-        geom_line(size = 1, color = "red") +
+        geom_line(linewidth = 1, color = "red") +
         labs(title = paste("Beklenen Ömür Farkı (", tablo1, " ve ", tablo2, ")", sep = ""), x = "Yaş", y = "Beklenen Ömür Farkı") +
         theme_minimal() +
         theme(
@@ -469,7 +469,7 @@ server <- function(input, output) {
       data_diff$Tazminat_Farki <- data_diff$Tazminat.y - data_diff$Tazminat.x
       
       g <- ggplot(data_diff, aes(x = Yas, y = Tazminat_Farki)) +
-        geom_line(size = 1, color = "blue") +
+        geom_line(linewidth = 1, color = "blue") +
         labs(title = paste("Tazminat Farkı (", tablo1, " ve ", tablo2, ")", sep = ""), x = "Yaş", y = "Tazminat Farkı") +
         theme_minimal() +
         theme(
