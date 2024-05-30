@@ -90,7 +90,7 @@ Sys.setlocale(locale = "Turkish")
 
 # Data ----
 
-data_tablo <- read_excel("C:/Users/gokhan.usta/Desktop/All Tables.xlsx",sheet = "tablo")
+data_tablo <- read_excel("../Erdi_App/All Tables.xlsx",sheet = "tablo")
 
 
 # Function ----
