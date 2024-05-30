@@ -88,6 +88,8 @@ library(DT)
 
 Sys.setlocale(locale = "Turkish")
 
+# hey gidi hey hey
+
 # Data ----
 
 data_tablo <- read_excel("../Erdi_App/All Tables.xlsx",sheet = "tablo")
