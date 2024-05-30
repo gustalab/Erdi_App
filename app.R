@@ -440,8 +440,8 @@ server <- function(input, output) {
         theme(
           panel.background = element_rect(fill = "white", color = NA),
           plot.background = element_rect(fill = "lightgrey", color = NA),
-          axis.title = element_text(size = 18),
-          axis.text = element_text(size = 18)
+          axis.title = element_text(size = 12),
+          axis.text = element_text(size = 12)
         ) +
         scale_y_continuous(labels = scales::comma) +
         scale_x_continuous()
@@ -475,8 +475,8 @@ server <- function(input, output) {
         theme(
           panel.background = element_rect(fill = "white", color = NA),
           plot.background = element_rect(fill = "lightgrey", color = NA),
-          axis.title = element_text(size = 18),
-          axis.text = element_text(size = 18)
+          axis.title = element_text(size = 12),
+          axis.text = element_text(size = 12)
         ) +
         scale_y_continuous(labels = scales::comma) +
         scale_x_continuous()
